@@ -6,7 +6,7 @@ author: "Claire & the NoMoreBadGift Team"
 tags: ["announcement", "community", "thoughtful-giving"]
 excerpt: "Join thousands of women who've discovered the secret to giving gifts that truly matter. Welcome to a community where every gift tells a story of love and thoughtfulness."
 ---
-
+ 
 # Welcome to Your Gift-Giving Transformation! 💖
 
 Hey beautiful souls! We're absolutely thrilled to welcome you to **NoMoreBadGift** – a space created by women, for women, who believe that every gift should be a meaningful expression of love and connection.
