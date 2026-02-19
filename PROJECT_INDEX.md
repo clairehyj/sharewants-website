@@ -1,26 +1,26 @@
-# NoMoreBadGift Website - Project Documentation Index
+# NoBadGift Website - Project Documentation Index
 
 ## Project Overview
 
-**NoMoreBadGift Website** is a Jekyll-based static marketing website for the NoMoreBadGift social gift-sharing mobile application. It serves as the primary web presence with product information, blog content, and app download links.
+**NoBadGift Website** is a Jekyll-based static marketing website for the NoBadGift social gift-sharing mobile application. It serves as the primary web presence with product information, blog content, and app download links.
 
 ## Quick Reference
 
 ### Development Commands
 ```bash
 # Start development server
-cd nomorebadgift-website && bundle exec jekyll serve
+cd nobadgift-website && bundle exec jekyll serve
 
 # Install dependencies
-cd nomorebadgift-website && bundle install
+cd nobadgift-website && bundle install
 
 # Build for production
-cd nomorebadgift-website && bundle exec jekyll build
+cd nobadgift-website && bundle exec jekyll build
 ```
 
 ### Deployment
 - **Auto-deploy**: Pushes to main branch trigger GitHub Pages deployment via `.github/workflows/jekyll.yml`
-- **Live URL**: https://clairehjy.github.io/nomorebadgift-website
+- **Live URL**: https://clairehjy.github.io/nobadgift-website
 - **Platform**: GitHub Pages with Jekyll
 
 ## Architecture & Technology Stack
@@ -108,7 +108,7 @@ assets/
 ```yaml
 title: No More Bad Gift
 description: The social gift-sharing app that helps you discover and share perfect gifts
-baseurl: "/nomorebadgift-website"
+baseurl: "/nobadgift-website"
 url: "https://clairehjy.github.io"
 
 # App store links (placeholder)
@@ -116,14 +116,14 @@ app_store_url: "#"
 google_play_url: "#"
 
 # SEO & Social
-twitter_username: nomorebadgift
+twitter_username: nobadgift
 github_username: clairehjy
 ```
 
 ### Blog Configuration
 - **Pagination**: 5 posts per page
 - **Permalink Structure**: `/blog/:year/:month/:day/:title/`
-- **Default Author**: "NoMoreBadGift Team"
+- **Default Author**: "NoBadGift Team"
 - **Layout**: Automatic post layout assignment
 
 ### SEO & Meta

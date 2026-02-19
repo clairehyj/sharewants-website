@@ -1,14 +1,14 @@
 # Site settings
 title: No More Bad Gift
-email: contact@nomorebadgift.com
+email: contact@nobadgift.com
 description: >-
   Transform your gift-giving experience with thoughtful discoveries. Connect with friends, 
   share wishlists, and give gifts that truly matter. Join thousands of women who never 
   give disappointing gifts again.
 tagline: "Give Gifts That Matter"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://nomorebadgift.com" # the base hostname & protocol for your site
-twitter_username: nomorebadgift
+url: "https://nobadgift.com" # the base hostname & protocol for your site
+twitter_username: nobadgift
 github_username: clairehjy
 
 # App store links (update when available)
@@ -47,10 +47,10 @@ exclude:
 # SEO settings
 logo: /assets/images/logo.png
 social:
-  name: NoMoreBadGift
+  name: NoBadGift
   links:
-    - https://twitter.com/nomorebadgift
-    - https://github.com/clairehjy/nomorebadgift
+    - https://twitter.com/nobadgift
+    - https://github.com/clairehjy/nobadgift
 
 # Default settings
 defaults:
@@ -59,7 +59,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "NoMoreBadGift Team"
+      author: "NoBadGift Team"
   - scope:
       path: ""
     values:

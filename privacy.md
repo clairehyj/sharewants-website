@@ -10,7 +10,7 @@ permalink: /privacy/
 
 ## Introduction
 
-NoMoreBadGift ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website.
+NoBadGift ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website.
 
 ## Information We Collect
 
@@ -153,7 +153,7 @@ Your information may be transferred to and processed in countries other than you
 
 ## Children's Privacy
 
-NoMoreBadGift is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.
+NoBadGift is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.
 
 ## Changes to This Policy
 
@@ -187,10 +187,10 @@ If you are in the European Economic Area, you have rights under the General Data
 
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
-**Email**: [privacy@nomorebadgift.com](mailto:privacy@nomorebadgift.com)
+**Email**: [privacy@nobadgift.com](mailto:privacy@nobadgift.com)
 
 **Mail**:
-NoMoreBadGift Privacy Team
+NoBadGift Privacy Team
 [Address to be added]
 
 **In-App**: Use the "Contact Support" feature in the app settings
@@ -202,4 +202,4 @@ For GDPR-related inquiries, you can contact our Data Protection Officer:
 
 ---
 
-*This Privacy Policy is effective as of the date listed above and applies to all information collected by NoMoreBadGift.*
+*This Privacy Policy is effective as of the date listed above and applies to all information collected by NoBadGift.*

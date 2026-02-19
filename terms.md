@@ -10,11 +10,11 @@ permalink: /terms/
 
 ## Agreement to Terms
 
-By accessing and using the NoMoreBadGift mobile application and website ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Service.
+By accessing and using the NoBadGift mobile application and website ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Service.
 
 ## Description of Service
 
-NoMoreBadGift is a social platform that helps users discover, share, and organize gift ideas with friends and family. Our Service includes:
+NoBadGift is a social platform that helps users discover, share, and organize gift ideas with friends and family. Our Service includes:
 - Gift discovery and sharing features
 - Social networking capabilities
 - Wishlist and preference management
@@ -63,7 +63,7 @@ NoMoreBadGift is a social platform that helps users discover, share, and organiz
 - You are responsible for ensuring your content doesn't violate these Terms
 
 ### Our Content
-- NoMoreBadGift owns the Service and its original content
+- NoBadGift owns the Service and its original content
 - Our trademarks, logos, and brand elements are protected
 - You may not use our intellectual property without permission
 - Some content may be owned by third parties and used with permission
@@ -200,10 +200,10 @@ These Terms are governed by the laws of [Jurisdiction to be specified], without 
 
 If you have questions about these Terms of Service, please contact us:
 
-**Email**: [legal@nomorebadgift.com](mailto:legal@nomorebadgift.com)
+**Email**: [legal@nobadgift.com](mailto:legal@nobadgift.com)
 
 **Mail**:
-NoMoreBadGift Legal Team
+NoBadGift Legal Team
 [Address to be added]
 
 **In-App**: Use the "Contact Support" feature in app settings
@@ -211,7 +211,7 @@ NoMoreBadGift Legal Team
 ## Miscellaneous
 
 ### Entire Agreement
-These Terms, along with our Privacy Policy, constitute the entire agreement between you and NoMoreBadGift.
+These Terms, along with our Privacy Policy, constitute the entire agreement between you and NoBadGift.
 
 ### Severability
 If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force.
@@ -227,4 +227,4 @@ Provisions that should survive termination (like intellectual property and limit
 
 ---
 
-*These Terms of Service are effective as of the date listed above and govern your use of the NoMoreBadGift Service.*
+*These Terms of Service are effective as of the date listed above and govern your use of the NoBadGift Service.*

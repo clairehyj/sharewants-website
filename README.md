@@ -1,12 +1,12 @@
-# NoMoreBadGift Website
+# NoBadGift Website
 
-Jekyll-based marketing website for the NoMoreBadGift social gift-sharing mobile application. Built with GitHub Pages deployment and responsive design.
+Jekyll-based marketing website for the NoBadGift social gift-sharing mobile application. Built with GitHub Pages deployment and responsive design.
 
 ## Overview
 
-The NoMoreBadGift website serves as the marketing landing page and blog platform for the mobile application. It provides information about the app, download links, blog content about gift-giving, and company information. The site is built with Jekyll for static site generation and automatically deploys to GitHub Pages.
+The NoBadGift website serves as the marketing landing page and blog platform for the mobile application. It provides information about the app, download links, blog content about gift-giving, and company information. The site is built with Jekyll for static site generation and automatically deploys to GitHub Pages.
 
-**Live Site**: [https://clairehjy.github.io/nomorebadgift-website](https://clairehjy.github.io/nomorebadgift-website)
+**Live Site**: [https://clairehjy.github.io/nobadgift-website](https://clairehjy.github.io/nobadgift-website)
 
 ## Tech Stack
 
@@ -30,8 +30,8 @@ The NoMoreBadGift website serves as the marketing landing page and blog platform
 
 ```bash
 # Clone the repository
-git clone https://github.com/clairehjy/nomorebadgift.git
-cd nomorebadgift/nomorebadgift-website
+git clone https://github.com/clairehjy/nobadgift.git
+cd nobadgift/nobadgift-website
 
 # Install dependencies
 bundle install
@@ -39,7 +39,7 @@ bundle install
 # Start development server
 bundle exec jekyll serve
 
-# Visit http://localhost:4000/nomorebadgift-website
+# Visit http://localhost:4000/nobadgift-website
 ```
 
 ### Development Commands
@@ -61,7 +61,7 @@ bundle exec jekyll clean
 ## Project Structure
 
 ```
-nomorebadgift-website/
+nobadgift-website/
 ├── _config.yml              # Site configuration
 ├── Gemfile                  # Ruby dependencies
 ├── Gemfile.lock            # Locked dependency versions
@@ -77,7 +77,7 @@ nomorebadgift-website/
 │   ├── home.html          # Homepage layout
 │   └── post.html          # Blog post layout
 ├── _posts/                 # Blog posts (YYYY-MM-DD-title.md)
-│   ├── 2024-01-15-welcome-to-nomorebadgift.md
+│   ├── 2024-01-15-welcome-to-nobadgift.md
 │   ├── 2024-01-20-gift-giving-tips.md
 │   └── 2024-01-25-social-gifting-trends.md
 ├── assets/                 # Static assets
@@ -102,8 +102,8 @@ nomorebadgift-website/
 ```yaml
 # Basic Configuration
 title: No More Bad Gift
-email: contact@nomorebadgift.com
-baseurl: "/nomorebadgift-website"
+email: contact@nobadgift.com
+baseurl: "/nobadgift-website"
 url: "https://clairehjy.github.io"
 
 # App Store Links
@@ -111,7 +111,7 @@ app_store_url: "#"  # Update when published
 google_play_url: "#"  # Update when published
 
 # Social Media
-twitter_username: nomorebadgift
+twitter_username: nobadgift
 github_username: clairehjy
 
 # Blog Settings
@@ -350,5 +350,5 @@ Private repository - All rights reserved
 ## Support
 
 For issues or questions:
-- Email: contact@nomorebadgift.com
-- GitHub Issues: [Create an issue](https://github.com/clairehjy/nomorebadgift/issues)
+- Email: contact@nobadgift.com
+- GitHub Issues: [Create an issue](https://github.com/clairehjy/nobadgift/issues)

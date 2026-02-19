@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-# About NoMoreBadGift
+# About NoBadGift
 
-NoMoreBadGift is a revolutionary social gift-sharing app that transforms the way we discover, share, and give gifts. Our mission is simple: **never give a bad gift again**.
+NoBadGift is a revolutionary social gift-sharing app that transforms the way we discover, share, and give gifts. Our mission is simple: **never give a bad gift again**.
 
 ## Our Story
 
 We've all been there – standing in a store, completely lost about what to buy for someone special. Or worse, watching someone open a gift you thought was perfect, only to see that polite smile that says "thanks, but this isn't really me."
 
-That's why we created NoMoreBadGift. We believe that gift-giving should be joyful, meaningful, and stress-free for both the giver and receiver.
+That's why we created NoBadGift. We believe that gift-giving should be joyful, meaningful, and stress-free for both the giver and receiver.
 
 ## How It Works
 
@@ -38,14 +38,14 @@ We're building a world where:
 
 ## The Team
 
-NoMoreBadGift is built by a passionate team of developers, designers, and gift-giving enthusiasts who believe technology can make personal connections more meaningful.
+NoBadGift is built by a passionate team of developers, designers, and gift-giving enthusiasts who believe technology can make personal connections more meaningful.
 
 ## Get Started
 
 Ready to transform your gift-giving experience? 
 
-[Download NoMoreBadGift](#) and join thousands of users who are already giving better gifts.
+[Download NoBadGift](#) and join thousands of users who are already giving better gifts.
 
 ---
 
-Have questions or feedback? We'd love to hear from you at [contact@nomorebadgift.com](mailto:contact@nomorebadgift.com).
+Have questions or feedback? We'd love to hear from you at [contact@nobadgift.com](mailto:contact@nobadgift.com).
