@@ -78,7 +78,7 @@ Recent studies reveal fascinating trends:
 - **Boomers (57+)**: 34% embrace digital gift registries
 
 ### Platform Preferences
-1. **Dedicated gift apps** (like NoBadGift): 42%
+1. **Dedicated gift apps** (like ShareWants): 42%
 2. **Social media platforms**: 31%
 3. **E-commerce wishlists**: 24%
 4. **Messaging apps**: 18%
@@ -240,10 +240,10 @@ Social gifting represents a fundamental evolution in how we express care and bui
 
 The key is using these tools to enhance rather than replace the human elements of thoughtfulness, creativity, and personal connection that make gifts special. As we continue to navigate this digital transformation, the most successful approaches will balance technological efficiency with emotional authenticity.
 
-Whether you're an early adopter or just getting started, social gifting platforms like NoBadGift offer exciting opportunities to become a better gift-giver while strengthening your relationships with friends and family.
+Whether you're an early adopter or just getting started, social gifting platforms like ShareWants offer exciting opportunities to become a better gift-giver while strengthening your relationships with friends and family.
 
 ---
 
-*Ready to join the social gifting revolution? Download NoBadGift today and discover how technology can make you a more thoughtful gift-giver.*
+*Ready to join the social gifting revolution? Download ShareWants today and discover how technology can make you a more thoughtful gift-giver.*
 
 **What's your experience with social gifting? Share your thoughts and tips with our community!**

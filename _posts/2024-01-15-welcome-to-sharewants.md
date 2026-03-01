@@ -2,14 +2,14 @@
 layout: post
 title: "Welcome to a New Era of Thoughtful Gift-Giving"
 date: 2024-01-15 10:00:00 -0000
-author: "Claire & the NoBadGift Team"
+author: "Claire & the ShareWants Team"
 tags: ["announcement", "community", "thoughtful-giving"]
 excerpt: "Join thousands of women who've discovered the secret to giving gifts that truly matter. Welcome to a community where every gift tells a story of love and thoughtfulness."
 ---
  
 # Welcome to Your Gift-Giving Transformation! 💖
 
-Hey beautiful souls! We're absolutely thrilled to welcome you to **NoBadGift** – a space created by women, for women, who believe that every gift should be a meaningful expression of love and connection.
+Hey beautiful souls! We're absolutely thrilled to welcome you to **ShareWants** – a space created by women, for women, who believe that every gift should be a meaningful expression of love and connection.
 
 ## The Story That Started It All
 
@@ -89,6 +89,6 @@ We're constantly listening to our community and adding features you've requested
 
 ---
 
-**Ready to give gifts that matter?** Download NoBadGift today and join thousands of women who've discovered the joy of thoughtful giving.
+**Ready to give gifts that matter?** Download ShareWants today and join thousands of women who've discovered the joy of thoughtful giving.
 
-*Questions? Ideas? Just want to chat?* Email us at [contact@nobadgift.com](mailto:contact@nobadgift.com) – we actually read every message! ✨
+*Questions? Ideas? Just want to chat?* Email us at [contact@sharewants.com](mailto:contact@sharewants.com) – we actually read every message! ✨

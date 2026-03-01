@@ -88,7 +88,7 @@ This is where your gift transforms from nice to *unforgettable*:
 
 ## 7. **Let Technology Support Your Heart**
 
-Here's where tools like NoBadGift become your secret weapon (not because I have to say that, but because it's genuinely helpful):
+Here's where tools like ShareWants become your secret weapon (not because I have to say that, but because it's genuinely helpful):
 
 - **Keep a running wishlist** instead of panicking in December
 - **Notice patterns** in what your friends love and share
@@ -169,8 +169,8 @@ The world needs more women like you who give from a place of love, not obligatio
 
 ## Ready to Transform Your Gift-Giving?
 
-*Join thousands of women who've discovered the joy of stress-free, meaningful gift-giving. Download NoBadGift and connect with a community that celebrates thoughtfulness over perfection.*
+*Join thousands of women who've discovered the joy of stress-free, meaningful gift-giving. Download ShareWants and connect with a community that celebrates thoughtfulness over perfection.*
 
 **I'd love to hear from you!** What's the most meaningful gift you've ever given or received? Share your story with our community – we're all learning from each other! 💕
 
-*Connect with me on social @nobadgift or email sarah@nobadgift.com – I read every single message!*
+*Connect with me on social @sharewants or email sarah@sharewants.com – I read every single message!*

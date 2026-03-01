@@ -1,26 +1,26 @@
-# NoBadGift Website - Project Documentation Index
+# ShareWants Website - Project Documentation Index
 
 ## Project Overview
 
-**NoBadGift Website** is a Jekyll-based static marketing website for the NoBadGift social gift-sharing mobile application. It serves as the primary web presence with product information, blog content, and app download links.
+**ShareWants Website** is a Jekyll-based static marketing website for the ShareWants social gift-sharing mobile application. It serves as the primary web presence with product information, blog content, and app download links.
 
 ## Quick Reference
 
 ### Development Commands
 ```bash
 # Start development server
-cd nobadgift-website && bundle exec jekyll serve
+cd sharewants-website && bundle exec jekyll serve
 
 # Install dependencies
-cd nobadgift-website && bundle install
+cd sharewants-website && bundle install
 
 # Build for production
-cd nobadgift-website && bundle exec jekyll build
+cd sharewants-website && bundle exec jekyll build
 ```
 
 ### Deployment
 - **Auto-deploy**: Pushes to main branch trigger GitHub Pages deployment via `.github/workflows/jekyll.yml`
-- **Live URL**: https://clairehjy.github.io/nobadgift-website
+- **Live URL**: https://clairehjy.github.io/sharewants-website
 - **Platform**: GitHub Pages with Jekyll
 
 ## Architecture & Technology Stack
@@ -106,9 +106,9 @@ assets/
 
 ### Site Configuration (`_config.yml`)
 ```yaml
-title: No More Bad Gift
+title: Share Wants
 description: The social gift-sharing app that helps you discover and share perfect gifts
-baseurl: "/nobadgift-website"
+baseurl: "/sharewants-website"
 url: "https://clairehjy.github.io"
 
 # App store links (placeholder)
@@ -116,14 +116,14 @@ app_store_url: "#"
 google_play_url: "#"
 
 # SEO & Social
-twitter_username: nobadgift
+twitter_username: sharewants
 github_username: clairehjy
 ```
 
 ### Blog Configuration
 - **Pagination**: 5 posts per page
 - **Permalink Structure**: `/blog/:year/:month/:day/:title/`
-- **Default Author**: "NoBadGift Team"
+- **Default Author**: "ShareWants Team"
 - **Layout**: Automatic post layout assignment
 
 ### SEO & Meta

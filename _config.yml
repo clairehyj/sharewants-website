@@ -1,14 +1,14 @@
 # Site settings
-title: No More Bad Gift
-email: contact@nobadgift.com
+title: Share Wants
+email: contact@sharewants.com
 description: >-
   Transform your gift-giving experience with thoughtful discoveries. Connect with friends, 
   share wishlists, and give gifts that truly matter. Join thousands of women who never 
   give disappointing gifts again.
 tagline: "Give Gifts That Matter"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://nobadgift.com" # the base hostname & protocol for your site
-twitter_username: nobadgift
+url: "https://sharewants.com" # the base hostname & protocol for your site
+twitter_username: sharewants
 github_username: clairehjy
 
 # App store links (update when available)
@@ -47,10 +47,10 @@ exclude:
 # SEO settings
 logo: /assets/images/logo.png
 social:
-  name: NoBadGift
+  name: ShareWants
   links:
-    - https://twitter.com/nobadgift
-    - https://github.com/clairehjy/nobadgift
+    - https://twitter.com/sharewants
+    - https://github.com/clairehjy/sharewants
 
 # Default settings
 defaults:
@@ -59,7 +59,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "NoBadGift Team"
+      author: "ShareWants Team"
   - scope:
       path: ""
     values:

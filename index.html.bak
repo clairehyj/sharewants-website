@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No More Bad Gift - Social Gift Discovery App</title>
+    <title>Share Wants - Social Gift Discovery App</title>
     <meta name="description" content="Discover perfect gifts through social connections. Share wishlists, follow friends, and never give a bad gift again.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="No More Bad Gift - Social Gift Discovery App">
+    <meta property="og:title" content="Share Wants - Social Gift Discovery App">
     <meta property="og:description" content="Discover perfect gifts through social connections. Share wishlists, follow friends, and never give a bad gift again.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nomorebadgift.app">
+    <meta property="og:url" content="https://sharewants.app">
     
     <!-- Favicon -->
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
@@ -580,7 +580,7 @@
         <nav class="nav container">
             <a href="#" class="logo">
                 <div class="logo-icon">🎁</div>
-                <span>No More Bad Gift</span>
+                <span>Share Wants</span>
             </a>
             
             <ul class="nav-links">
@@ -612,7 +612,7 @@
                     <div class="phone-mockup">
                         <div class="phone-screen">
                             <div class="app-icon">🎁</div>
-                            <h3 style="margin-bottom: 0.5rem; color: var(--gray-900);">No More Bad Gift</h3>
+                            <h3 style="margin-bottom: 0.5rem; color: var(--gray-900);">Share Wants</h3>
                             <p style="color: var(--gray-600); text-align: center; padding: 0 1rem;">Social Gift Discovery</p>
                         </div>
                     </div>
@@ -625,7 +625,7 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose No More Bad Gift?</h2>
+                <h2>Why Choose Share Wants?</h2>
                 <p>Transform your gift-giving experience with our intelligent social platform designed for modern gift discovery.</p>
             </div>
             
@@ -697,7 +697,7 @@
     <section id="download" class="cta">
         <div class="container">
             <h2>Ready to Give Better Gifts?</h2>
-            <p>Join thousands of users who have revolutionized their gift-giving experience. Download No More Bad Gift today and start discovering perfect gifts.</p>
+            <p>Join thousands of users who have revolutionized their gift-giving experience. Download Share Wants today and start discovering perfect gifts.</p>
             
             <div class="app-badges">
                 <a href="#" class="app-badge" aria-label="Download on App Store">
@@ -715,7 +715,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>No More Bad Gift</h4>
+                    <h4>Share Wants</h4>
                     <p>Revolutionizing gift-giving through social discovery. Connect with friends, discover perfect gifts, and never give a bad gift again.</p>
                 </div>
                 
@@ -732,7 +732,7 @@
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:support@nomorebadgift.app">Support</a></li>
+                        <li><a href="mailto:support@sharewants.app">Support</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                         <li><a href="/faq.html">FAQ</a></li>
                         <li><a href="/help.html">Help Center</a></li>
@@ -751,7 +751,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 No More Bad Gift. All rights reserved.</p>
+                <p>&copy; 2024 Share Wants. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,6 +1,6 @@
 # Images Directory
 
-This directory contains all images used on the NoBadGift website.
+This directory contains all images used on the ShareWants website.
 
 ## Required Images
 
