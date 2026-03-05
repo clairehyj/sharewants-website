@@ -1,0 +1,263 @@
+---
+layout: none
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareWants</title>
+    <link rel="icon" href="/assets/images/icons/favicon.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #ec4899;
+            --primary-light: #f472b6;
+            --primary-dark: #db2777;
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 1rem 0;
+        }
+        .header .container { display: flex; align-items: center; justify-content: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-dark); font-size: 1.5rem; font-weight: 700; }
+        .logo-icon { font-size: 2rem; }
+
+        /* Main content */
+        .main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem 0; }
+
+        /* Deep link landing */
+        .landing { text-align: center; }
+        .avatar {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.5rem; font-size: 2rem; color: white;
+        }
+        .avatar img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+        .landing h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem; margin-bottom: 0.75rem; color: var(--text-dark);
+        }
+        .landing p { color: var(--text-medium); font-size: 1.05rem; margin-bottom: 2rem; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600;
+            text-decoration: none; border: none; cursor: pointer; font-size: 1rem;
+            width: 100%; max-width: 320px; transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            margin-bottom: 1rem;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .btn-secondary {
+            background: var(--white); color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-secondary:hover { background: var(--primary-color); color: white; }
+        .note { color: var(--text-light); font-size: 0.85rem; margin-top: 1.5rem; }
+
+        /* Generic 404 */
+        .not-found { text-align: center; }
+        .not-found h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; margin-bottom: 1rem; }
+        .not-found p { color: var(--text-medium); font-size: 1.1rem; margin-bottom: 2rem; }
+        .not-found a { color: var(--primary-color); font-weight: 600; }
+
+        /* Loading state */
+        .loading { text-align: center; color: var(--text-light); }
+        .spinner {
+            width: 40px; height: 40px; border: 3px solid var(--gray-200);
+            border-top-color: var(--primary-color); border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin: 0 auto 1rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Hidden by default */
+        #deeplink-landing, #generic-404, #loading { display: none; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-icon">🎁</span>
+                <span>Share Wants</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <!-- Loading state -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading...</p>
+            </div>
+
+            <!-- Deep link landing (user/gift) -->
+            <div id="deeplink-landing" class="landing">
+                <div class="avatar" id="avatar-container">
+                    <span id="avatar-initial">?</span>
+                </div>
+                <h1 id="landing-title">Someone wants to share with you!</h1>
+                <p id="landing-subtitle">View their wishlist on ShareWants</p>
+                <a href="#" id="get-app-btn" class="btn btn-primary">Get ShareWants</a>
+                <a href="#" id="open-app-btn" class="btn btn-secondary">Open in App</a>
+                <p class="note">Free on the App Store</p>
+            </div>
+
+            <!-- Generic 404 -->
+            <div id="generic-404" class="not-found">
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for doesn't exist.</p>
+                <a href="/">Go to ShareWants.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var API_BASE = 'https://sharewants-api-137368296780.us-central1.run.app';
+        var APP_STORE_URL = 'https://apps.apple.com/app/sharewants/id6744228534';
+        var path = window.location.pathname;
+
+        // Match /user/{id} or /gift/{id}
+        var userMatch = path.match(/^\/user\/(\d+)$/);
+        var giftMatch = path.match(/^\/gift\/(\d+)$/);
+
+        if (!userMatch && !giftMatch) {
+            document.getElementById('generic-404').style.display = 'block';
+            return;
+        }
+
+        var targetType = userMatch ? 'user' : 'gift';
+        var targetId = userMatch ? userMatch[1] : giftMatch[1];
+
+        // Show loading
+        document.getElementById('loading').style.display = 'block';
+
+        // Set up custom scheme link (fallback for in-app browsers)
+        document.getElementById('open-app-btn').href = 'sharewants://' + targetType + '/' + targetId;
+
+        // Fetch public profile for personalization
+        if (targetType === 'user') {
+            fetch(API_BASE + '/auth/public-profile/' + targetId)
+                .then(function(r) { return r.ok ? r.json() : null; })
+                .then(function(data) {
+                    if (data && data.name) {
+                        document.getElementById('landing-title').textContent =
+                            data.name + ' wants to share their wishlist with you!';
+                        document.getElementById('landing-subtitle').textContent =
+                            'Join ShareWants to follow ' + data.name + ' and see what they want.';
+                        document.getElementById('avatar-initial').textContent =
+                            data.name.charAt(0).toUpperCase();
+
+                        if (data.avatarUrl) {
+                            var img = document.createElement('img');
+                            img.src = data.avatarUrl;
+                            img.alt = data.name;
+                            var container = document.getElementById('avatar-container');
+                            container.innerHTML = '';
+                            container.appendChild(img);
+                        }
+                    }
+                    showLanding();
+                })
+                .catch(function() { showLanding(); });
+        } else {
+            // Gift link — fetch gift details for personalization
+            fetch(API_BASE + '/gifts/single/' + targetId)
+                .then(function(r) { return r.ok ? r.json() : null; })
+                .then(function(data) {
+                    if (data && data.title) {
+                        document.getElementById('landing-title').textContent =
+                            'Check out ' + data.title + ' on ShareWants!';
+                        var authorName = [data.author_first_name, data.author_last_name]
+                            .filter(Boolean).join(' ');
+                        var priceStr = '';
+                        var price = parseFloat(data.price);
+                        if (price > 0) priceStr = ' — $' + price.toFixed(2);
+                        document.getElementById('landing-subtitle').textContent =
+                            (authorName ? 'Added by ' + authorName : 'A gift idea') + priceStr;
+
+                        if (data.image) {
+                            var img = document.createElement('img');
+                            img.src = data.image;
+                            img.alt = data.title;
+                            var container = document.getElementById('avatar-container');
+                            container.innerHTML = '';
+                            container.appendChild(img);
+                        } else {
+                            document.getElementById('avatar-initial').textContent = '🎁';
+                        }
+                    } else {
+                        document.getElementById('landing-title').textContent = 'Check out this gift idea!';
+                        document.getElementById('landing-subtitle').textContent = 'View it on ShareWants.';
+                    }
+                    showLanding();
+                })
+                .catch(function() {
+                    document.getElementById('landing-title').textContent = 'Check out this gift idea!';
+                    document.getElementById('landing-subtitle').textContent = 'View it on ShareWants.';
+                    showLanding();
+                });
+        }
+
+        function showLanding() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('deeplink-landing').style.display = 'block';
+        }
+
+        // "Get App" button: store deferred deep link, then redirect to App Store
+        document.getElementById('get-app-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            var btn = this;
+            btn.textContent = 'Redirecting...';
+            btn.style.pointerEvents = 'none';
+
+            // Fire and forget — store the deferred deep link
+            fetch(API_BASE + '/deferred-deep-links', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ targetType: targetType, targetId: targetId })
+            }).catch(function() { /* ignore errors */ });
+
+            // Redirect to App Store after brief delay
+            setTimeout(function() {
+                window.location.href = APP_STORE_URL;
+            }, 300);
+        });
+    })();
+    </script>
+</body>
+</html>
