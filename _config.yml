@@ -1,65 +1,42 @@
 # Site settings
-title: Share Wants
+title: ShareWants
 email: contact@sharewants.com
 description: >-
-  Transform your gift-giving experience with thoughtful discoveries. Connect with friends, 
-  share wishlists, and give gifts that truly matter. Join thousands of women who never 
-  give disappointing gifts again.
-tagline: "Give Gifts That Matter"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sharewants.com" # the base hostname & protocol for your site
-twitter_username: sharewants
-github_username: clairehjy
+  Know what your friends and family actually want. Social wishlists that make
+  gift-giving effortless.
+baseurl: ""
+url: "https://sharewants.com"
 
-# App store links (update when available)
-app_store_url: "#"
-google_play_url: "#"
+# App store link
+app_store_url: "https://apps.apple.com/app/sharewants/id6744228534"
+
+# Include dotfile directories (needed for .well-known/apple-app-site-association)
+include:
+  - .well-known
 
 # Build settings
+theme: null
 markdown: kramdown
-highlighter: rouge
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
-
-# Blog settings
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
 
 # Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - README.md
+  - PROJECT_INDEX.md
+  - package.json
+  - package-lock.json
+  - take-screenshots.mjs
 
 # SEO settings
 logo: /assets/images/logo.png
-social:
-  name: ShareWants
-  links:
-    - https://twitter.com/sharewants
-    - https://github.com/clairehjy/sharewants
 
-# Default settings
+# Default layout
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "ShareWants Team"
   - scope:
       path: ""
     values:

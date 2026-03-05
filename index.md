@@ -1,476 +1,75 @@
 ---
 layout: default
-title: "Give Gifts That Matter"
-description: "Discover perfect gifts through social connections. Share wishlists, follow friends, and never give a bad gift again."
+title: "Know What Your Friends Want"
+description: "Social wishlists that make gift-giving effortless. Add items from any store, follow friends, and give gifts they actually love."
 ---
 
-<style>
-    /* Hero Section */
-    .hero {
-        background: linear-gradient(135deg, 
-            rgba(236, 72, 153, 0.1) 0%, 
-            rgba(251, 191, 36, 0.1) 50%, 
-            rgba(6, 214, 160, 0.1) 100%);
-        padding: 6rem 0;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ec4899' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-        pointer-events: none;
-    }
-
-    .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(3rem, 6vw, 4.5rem);
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .hero-text p {
-        font-size: 1.25rem;
-        color: var(--text-medium);
-        margin-bottom: 2rem;
-        max-width: 500px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .hero-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .phone-mockup {
-        width: 300px;
-        height: 600px;
-        background: linear-gradient(145deg, #f0f0f0, #ffffff);
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: var(--shadow-xl);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .phone-screen {
-        width: 100%;
-        height: 100%;
-        background: var(--white);
-        border-radius: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .app-icon {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    /* Features Section */
-    .features {
-        padding: 6rem 0;
-        background: var(--gray-50);
-    }
-
-    .section-header {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto 4rem;
-    }
-
-    .section-header h2 {
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-    }
-
-    .section-header p {
-        font-size: 1.1rem;
-        color: var(--text-medium);
-    }
-
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .feature-card {
-        background: var(--white);
-        padding: 2.5rem 2rem;
-        border-radius: var(--border-radius-xl);
-        box-shadow: var(--shadow-md);
-        text-align: center;
-        transition: all 0.3s ease;
-        border: 1px solid var(--gray-100);
-    }
-
-    .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-xl);
-        border-color: var(--primary-color);
-    }
-
-    .feature-icon {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .feature-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-    }
-
-    .feature-card p {
-        color: var(--text-medium);
-        line-height: 1.6;
-    }
-
-    /* About Section */
-    .about {
-        padding: 6rem 0;
-        background: var(--white);
-    }
-
-    .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .about-text h2 {
-        margin-bottom: 1.5rem;
-        color: var(--text-dark);
-    }
-
-    .about-text p {
-        font-size: 1.1rem;
-        color: var(--text-medium);
-        margin-bottom: 1.5rem;
-        line-height: 1.7;
-    }
-
-    .about-stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .stat-item {
-        text-align: center;
-        padding: 1.5rem;
-        background: var(--gray-50);
-        border-radius: var(--border-radius-lg);
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        display: block;
-    }
-
-    .stat-label {
-        font-size: 0.9rem;
-        color: var(--text-medium);
-        font-weight: 500;
-    }
-
-    .about-image {
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        border-radius: var(--border-radius-xl);
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 6rem;
-    }
-
-    /* CTA Section */
-    .cta {
-        background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-        padding: 6rem 0;
-        text-align: center;
-        color: white;
-    }
-
-    .cta h2 {
-        color: white;
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        margin-bottom: 1.5rem;
-    }
-
-    .cta p {
-        font-size: 1.2rem;
-        margin-bottom: 3rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0.9;
-    }
-
-    .app-badges {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .app-badge {
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
-
-    .app-badge:hover {
-        transform: translateY(-5px);
-    }
-
-    .app-badge img {
-        height: 60px;
-        border-radius: var(--border-radius-md);
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-        padding: 6rem 0;
-        background: var(--gray-50);
-    }
-
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .testimonial-card {
-        background: var(--white);
-        padding: 2.5rem 2rem;
-        border-radius: var(--border-radius-xl);
-        box-shadow: var(--shadow-md);
-        text-align: center;
-        border: 1px solid var(--gray-100);
-    }
-
-    .testimonial-quote {
-        font-size: 1.1rem;
-        font-style: italic;
-        color: var(--text-medium);
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-    }
-
-    .testimonial-author {
-        font-weight: 600;
-        color: var(--text-dark);
-        margin-bottom: 0.5rem;
-    }
-
-    .testimonial-role {
-        font-size: 0.9rem;
-        color: var(--text-light);
-    }
-
-    /* Latest Blog Section */
-    .latest-blog {
-        padding: 6rem 0;
-        background: var(--gray-50);
-    }
-
-    .blog-preview-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-
-    .blog-preview-card {
-        background: var(--white);
-        padding: 2rem;
-        border-radius: var(--border-radius-xl);
-        box-shadow: var(--shadow-md);
-        transition: all 0.3s ease;
-        border: 1px solid var(--gray-100);
-    }
-
-    .blog-preview-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-xl);
-        border-color: var(--primary-color);
-    }
-
-    .blog-meta {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-        color: var(--text-light);
-    }
-
-    .blog-meta .author {
-        color: var(--primary-color);
-        font-weight: 600;
-    }
-
-    .blog-preview-card h3 {
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-        line-height: 1.4;
-    }
-
-    .blog-preview-card h3 a {
-        color: var(--text-dark);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .blog-preview-card h3 a:hover {
-        color: var(--primary-color);
-    }
-
-    .blog-preview-card p {
-        color: var(--text-medium);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-    }
-
-    .blog-preview-card .read-more {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: all 0.3s ease;
-    }
-
-    .blog-preview-card .read-more:hover {
-        color: var(--primary-dark);
-        transform: translateX(3px);
-    }
-
-    .blog-preview-card .read-more::after {
-        content: '→';
-        transition: transform 0.3s ease;
-    }
-
-    .blog-preview-card .read-more:hover::after {
-        transform: translateX(2px);
-    }
-
-    .blog-cta {
-        text-align: center;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .hero-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .hero-buttons {
-            justify-content: center;
-        }
-
-        .phone-mockup {
-            width: 250px;
-            height: 500px;
-        }
-
-        .about-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .about-stats {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .features-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .blog-preview-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .app-badges {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
-
-<!-- Hero Section -->
+<!-- Header -->
+<header class="header">
+    <nav class="nav container">
+        <a href="/" class="logo">
+            <img src="/assets/images/logo.png" alt="ShareWants" class="logo-img">
+            <span>ShareWants</span>
+        </a>
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#download" class="btn btn-sm">Download</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
 <section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1>Know What Your<br>Friends <em>Actually</em> Want</h1>
+            <p class="hero-sub">Social wishlists that take the guesswork out of gift-giving. Save items from any store, follow the people you love, and give gifts they'll actually use.</p>
+            <a href="{{ site.app_store_url }}" class="btn btn-primary btn-lg">Download Free on iOS</a>
+        </div>
+        <div class="hero-phone">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <img src="/assets/images/screenshots/feeds.png" alt="ShareWants feed showing gift ideas from friends" class="phone-screen">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works" class="steps-section">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Give Gifts That Matter</h1>
-                <p>Transform your gift-giving experience through meaningful social connections. Discover perfect gifts, share wishlists, and never disappoint again.</p>
-                <div class="hero-buttons">
-                    <a href="{{ site.app_store_url }}" class="btn btn-primary">
-                        📱 Download App
-                    </a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Add items you want</h3>
+                <p>Save products from 24+ retailers using our share extension or AI scanner. Build your wishlist in seconds.</p>
+                <div class="step-phone">
+                    <div class="phone-frame phone-frame-sm">
+                        <div class="phone-notch"></div>
+                        <img src="/assets/images/screenshots/mygifts.png" alt="ShareWants wishlist with saved gift items" class="phone-screen">
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="app-icon">🎁</div>
-                        <h3 style="margin-bottom: 0.5rem; color: var(--gray-900);">{{ site.title }}</h3>
-                        <p style="color: var(--gray-600); text-align: center; padding: 0 1rem;">Social Gift Discovery</p>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Follow friends & family</h3>
+                <p>Connect with the people you care about and see what's on their lists — no more awkward "what do you want?" texts.</p>
+                <div class="step-phone">
+                    <div class="phone-frame phone-frame-sm">
+                        <div class="phone-notch"></div>
+                        <img src="/assets/images/screenshots/follows.png" alt="ShareWants following friends and family" class="phone-screen">
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Give gifts they love</h3>
+                <p>When it's time to shop, you already know exactly what they want. Every gift is a hit.</p>
+                <div class="step-phone">
+                    <div class="phone-frame phone-frame-sm">
+                        <div class="phone-notch"></div>
+                        <img src="/assets/images/screenshots/trends.png" alt="ShareWants trending gift ideas" class="phone-screen">
                     </div>
                 </div>
             </div>
@@ -478,176 +77,433 @@ description: "Discover perfect gifts through social connections. Share wishlists
     </div>
 </section>
 
-<!-- Features Section -->
-<section id="features" class="features">
+<!-- Differentiators -->
+<section class="diff-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Why Choose {{ site.title }}?</h2>
-            <p>Transform your gift-giving experience with our intelligent social platform designed for modern gift discovery.</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🔍</div>
-                <h3>Smart Discovery</h3>
-                <p>Discover trending gifts and perfect matches based on your friends' preferences and social connections.</p>
+        <h2 class="section-title">Why ShareWants?</h2>
+        <div class="diffs">
+            <div class="diff">
+                <span class="diff-icon">&#x1f465;</span>
+                <h3>Social-First Wishlists</h3>
+                <p>Built for sharing, not just saving. See your friends' wants in a beautiful feed.</p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Social Gifting</h3>
-                <p>Follow friends, share wishlists, and give gifts that create meaningful connections and lasting memories.</p>
+            <div class="diff">
+                <span class="diff-icon">&#x1f916;</span>
+                <h3>AI Product Scanning</h3>
+                <p>Snap a photo or share a link — our AI extracts product details automatically.</p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">💝</div>
-                <h3>Wishlist Sharing</h3>
-                <p>Create and share wishlists for any occasion. Let friends know exactly what would make you happy.</p>
+            <div class="diff">
+                <span class="diff-icon">&#x1f6cd;&#xfe0f;</span>
+                <h3>24+ Retailers</h3>
+                <p>Works with Amazon, Target, Sephora, Nike, and more. One list, every store.</p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Perfect Matches</h3>
-                <p>Our intelligent algorithm suggests gifts based on personality, interests, and social connections.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🔔</div>
-                <h3>Smart Reminders</h3>
-                <p>Never miss another birthday or special occasion with intelligent notifications and planning tools.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Celebration Tracking</h3>
-                <p>Keep track of special moments, preferences, and gift history to build stronger relationships.</p>
+            <div class="diff">
+                <span class="diff-icon">&#x2728;</span>
+                <h3>Completely Free</h3>
+                <p>No subscriptions, no premium tiers. All features, always free.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Revolutionizing Gift-Giving Through Social Connection</h2>
-                <p>{{ site.title }} transforms the way we give and receive gifts by creating meaningful connections between friends, family, and loved ones. Our platform combines social discovery with intelligent recommendations to ensure every gift is thoughtful and appreciated.</p>
-                <p>Join thousands of women who have discovered the joy of giving perfect gifts every time. Build stronger relationships, create lasting memories, and never give a disappointing gift again.</p>
-                
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">10K+</span>
-                        <span class="stat-label">Happy Users</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Perfect Gifts</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Satisfaction Rate</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Support</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image">
-                🎁
-            </div>
-        </div>
+<!-- Download CTA -->
+<section id="download" class="cta-section">
+    <div class="container cta-inner">
+        <h2>Stop guessing.<br>Start giving.</h2>
+        <p>Join ShareWants and never give a bad gift again.</p>
+        <a href="{{ site.app_store_url }}" class="btn btn-white btn-lg">Download Free on iOS</a>
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2>What Our Users Say</h2>
-            <p>Real stories from women who transformed their gift-giving experience</p>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    "Finally, an app that understands what my friends actually want! I've never given better gifts."
-                </div>
-                <div class="testimonial-author">Sarah Chen</div>
-                <div class="testimonial-role">Marketing Manager</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    "The wishlist sharing feature is genius. No more awkward guessing games at birthdays!"
-                </div>
-                <div class="testimonial-author">Emily Rodriguez</div>
-                <div class="testimonial-role">New Mom</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    "As someone who travels for work, the reminder feature has saved me countless times."
-                </div>
-                <div class="testimonial-author">Jessica Kim</div>
-                <div class="testimonial-role">Sales Executive</div>
-            </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <p>&copy; {{ 'now' | date: "%Y" }} ShareWants. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="mailto:contact@sharewants.com">Contact</a>
         </div>
     </div>
-</section>
+</footer>
 
-<!-- Latest Blog Posts Section -->
-<section class="latest-blog">
-    <div class="container">
-        <div class="section-header">
-            <h2>Stories & Tips from Our Community</h2>
-            <p>Get inspired by real stories and expert advice from women who've mastered the art of thoughtful gift-giving.</p>
-        </div>
-        
-        <div class="blog-preview-grid">
-            {% assign recent_posts = site.posts | limit: 3 %}
-            {% for post in recent_posts %}
-                <article class="blog-preview-card">
-                    <div class="blog-meta">
-                        <time datetime="{{ post.date | date_to_xmlschema }}">
-                            {{ post.date | date: "%B %d, %Y" }}
-                        </time>
-                        {% if post.author %}
-                            <span class="author">by {{ post.author }}</span>
-                        {% endif %}
-                    </div>
-                    
-                    <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-                    
-                    {% if post.excerpt %}
-                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                    {% endif %}
-                    
-                    <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-                </article>
-            {% endfor %}
-        </div>
-        
-        <div class="blog-cta">
-            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">View All Stories</a>
-        </div>
-    </div>
-</section>
+<style>
+/* ===== HOMEPAGE STYLES ===== */
 
-<!-- Download CTA Section -->
-<section id="download" class="cta">
-    <div class="container">
-        <h2>Ready to Give Better Gifts?</h2>
-        <p>Join thousands of users who have revolutionized their gift-giving experience. Download {{ site.title }} today and start discovering perfect gifts.</p>
-        
-        <div class="app-badges">
-            <a href="{{ site.app_store_url }}" class="app-badge" aria-label="Download on App Store">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' rx='12' fill='%23000'/%3E%3Ctext x='100' y='30' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='Arial' font-size='12'%3EDownload on App Store%3C/text%3E%3C/svg%3E" alt="Download on App Store">
-            </a>
-            <a href="{{ site.google_play_url }}" class="app-badge" aria-label="Get it on Google Play">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' rx='12' fill='%23000'/%3E%3Ctext x='100' y='30' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='Arial' font-size='12'%3EGet it on Google Play%3C/text%3E%3C/svg%3E" alt="Get it on Google Play">
-            </a>
-        </div>
-    </div>
-</section>
+/* --- Header --- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 249, 242, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: box-shadow 0.3s;
+}
+.header.scrolled {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+.nav-links a {
+    color: var(--taupe);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn-sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    background: var(--pink);
+    color: #fff;
+}
+.btn-sm:hover {
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(247,127,190,0.35);
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--pink), #f9a0d0);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(247,127,190,0.3);
+}
+.btn-primary:hover {
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(247,127,190,0.4);
+}
+.btn-white {
+    background: #fff;
+    color: var(--pink);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.btn-white:hover {
+    color: var(--pink);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+.btn-lg {
+    padding: 1rem 2.25rem;
+    font-size: 1.1rem;
+    border-radius: 14px;
+}
+
+/* --- Phone Frame Mockup --- */
+.phone-frame {
+    position: relative;
+    width: 260px;
+    background: #1a1a1a;
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.15),
+        0 0 0 1px rgba(255,255,255,0.1) inset;
+}
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 24px;
+    background: #1a1a1a;
+    border-radius: 0 0 18px 18px;
+    z-index: 2;
+}
+.phone-notch {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    background: #1a1a1a;
+    border-radius: 0 0 14px 14px;
+    z-index: 3;
+}
+.phone-screen {
+    width: 100%;
+    display: block;
+    border-radius: 24px;
+    background: #fff;
+}
+.phone-frame-sm {
+    width: 180px;
+}
+
+/* --- Hero --- */
+.hero {
+    background: var(--bg);
+    padding: 4rem 0 5rem;
+}
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.hero-text {
+    max-width: 480px;
+}
+.hero h1 {
+    font-family: var(--heading);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+}
+.hero h1 em {
+    font-style: normal;
+    color: var(--pink);
+}
+.hero-sub {
+    font-size: 1.1rem;
+    color: var(--taupe);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+.hero-phone {
+    display: flex;
+    justify-content: center;
+}
+
+/* --- How It Works --- */
+.steps-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+.section-title {
+    font-family: var(--heading);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text);
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.step {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    border-radius: 20px;
+    background: var(--bg);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+.step-num {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink), var(--yellow));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 1.25rem;
+}
+.step h3 {
+    font-family: var(--heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+.step p {
+    font-size: 0.92rem;
+    color: var(--taupe);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.step-phone {
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Differentiators --- */
+.diff-section {
+    padding: 5rem 0;
+    background: var(--bg);
+}
+.diffs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.diff {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.diff:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+}
+.diff-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.diff h3 {
+    font-family: var(--heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+.diff p {
+    font-size: 0.95rem;
+    color: var(--taupe);
+    line-height: 1.6;
+}
+
+/* --- CTA --- */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    text-align: center;
+}
+.cta-inner {
+    max-width: 560px;
+    margin: 0 auto;
+}
+.cta-section h2 {
+    font-family: var(--heading);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+.cta-section p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 1.5rem 0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer p {
+    color: var(--taupe);
+    font-size: 0.85rem;
+    margin: 0;
+}
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-links a {
+    color: var(--taupe);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-phone {
+        order: -1;
+    }
+    .phone-frame {
+        width: 200px;
+    }
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
+    .phone-frame-sm {
+        width: 160px;
+    }
+    .diffs {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    .hero {
+        padding: 3rem 0 3.5rem;
+    }
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
