@@ -6,7 +6,7 @@ permalink: /privacy/
 
 # Privacy Policy
 
-*Last updated: January 15, 2024*
+*Last updated: March 5, 2026*
 
 ## Introduction
 
@@ -91,6 +91,14 @@ We may share information with:
 
 ### We Never Sell Personal Data
 We do not sell, rent, or trade your personal information to third parties for their marketing purposes.
+
+## Affiliate Links and Advertising
+
+ShareWants participates in affiliate advertising programs, including the Amazon Services LLC Associates Program and other affiliate networks (Impact, Awin, Rakuten, eBay Partner Network). When you save a product link through our app, the link may contain affiliate tracking parameters. If you make a purchase through these links, ShareWants may earn a commission at no additional cost to you.
+
+We are committed to only recommending products that are relevant to your wishlist and gift preferences. Affiliate relationships do not influence how products are displayed or organized within the app.
+
+For Amazon products: As an Amazon Associate, ShareWants earns from qualifying purchases. Certain content that appears in this application comes from Amazon. This content is provided "as is" and is subject to change or removal at any time.
 
 ## Your Privacy Choices
 

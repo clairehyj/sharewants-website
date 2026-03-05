@@ -6,7 +6,7 @@ permalink: /terms/
 
 # Terms of Service
 
-*Last updated: January 15, 2024*
+*Last updated: March 5, 2026*
 
 ## Agreement to Terms
 
@@ -73,6 +73,16 @@ ShareWants is a social platform that helps users discover, share, and organize g
 - We don't endorse or verify third-party content
 - Report inappropriate content using our reporting tools
 - We may remove content that violates these Terms
+
+## Monetization and Affiliate Links
+
+ShareWants may earn revenue through affiliate partnerships with retailers. Product links saved or shared through the Service may contain affiliate tracking parameters. By using the Service, you acknowledge that:
+- Product links may be modified to include affiliate tracking
+- ShareWants may earn commissions from purchases made through these links
+- Product prices and availability are subject to change and may differ at the time of purchase
+- Affiliate relationships do not affect the functionality or content of the Service
+
+ShareWants participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
 
 ## Privacy and Data
 

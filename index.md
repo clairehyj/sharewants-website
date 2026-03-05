@@ -146,6 +146,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
         <div class="footer-links">
             <a href="/privacy/">Privacy</a>
             <a href="/terms/">Terms</a>
+            <a href="/disclosure/">Disclosure</a>
             <a href="mailto:contact@sharewants.com">Contact</a>
         </div>
         <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} ShareWants. All rights reserved.</p>
