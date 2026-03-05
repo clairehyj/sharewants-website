@@ -7,8 +7,12 @@ description: >-
 baseurl: ""
 url: "https://sharewants.com"
 
-# App store link
+# App store links
 app_store_url: "https://apps.apple.com/app/sharewants/id6744228534"
+play_store_url: "https://play.google.com/store/apps/details?id=com.sharewants.ShareWants"
+
+# Web app
+web_app_url: "https://app.sharewants.com"
 
 # Include dotfile directories (needed for .well-known/apple-app-site-association)
 include:

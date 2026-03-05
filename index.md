@@ -13,6 +13,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
         </a>
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
+            <a href="{{ site.web_app_url }}" class="btn btn-sm btn-outline">Log In</a>
             <a href="#download" class="btn btn-sm">Download</a>
         </div>
     </nav>
@@ -24,7 +25,14 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
         <div class="hero-text">
             <h1>Know What Your<br>Friends <em>Actually</em> Want</h1>
             <p class="hero-sub">Social wishlists that take the guesswork out of gift-giving. Save items from any store, follow the people you love, and give gifts they'll actually use.</p>
-            <a href="{{ site.app_store_url }}" class="btn btn-primary btn-lg">Download Free on iOS</a>
+            <div class="store-badges">
+                <a href="{{ site.app_store_url }}" class="store-badge" aria-label="Download on the App Store">
+                    <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="40" rx="5" fill="#000"/><g fill="#fff"><path d="M24.77 20.3a4.95 4.95 0 0 1 2.36-4.15 5.07 5.07 0 0 0-3.99-2.16c-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.62-.96a5.33 5.33 0 0 0-4.49 2.73c-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.01 2.82 3.44 2.76 1.39-.06 1.91-.88 3.59-.88 1.67 0 2.14.88 3.59.85 1.49-.02 2.43-1.33 3.33-2.67a10.96 10.96 0 0 0 1.52-3.09 4.78 4.78 0 0 1-2.92-4.41zM22.04 12.21a4.87 4.87 0 0 0 1.12-3.49 4.95 4.95 0 0 0-3.21 1.66 4.64 4.64 0 0 0-1.14 3.37 4.11 4.11 0 0 0 3.23-1.54z"/><text x="42" y="15" font-family="Inter,Helvetica,Arial,sans-serif" font-size="8" font-weight="400" letter-spacing=".5">Download on the</text><text x="42" y="28" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">App Store</text></g></svg>
+                </a>
+                <a href="{{ site.play_store_url }}" class="store-badge" aria-label="Get it on Google Play">
+                    <svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg"><rect width="135" height="40" rx="5" fill="#000"/><g fill="#fff"><path d="M13.54 7.82c-.35.37-.55.91-.55 1.58v21.2c0 .67.2 1.21.55 1.58l.08.08L25.3 20.58v-.16L13.62 8.74l-.08.08z" fill="#00d1ff"/><path d="M29.2 24.48l-3.9-3.9v-.16l3.9-3.9.09.05 4.62 2.62c1.32.75 1.32 1.97 0 2.72l-4.62 2.62-.09.05z" fill="#ffbc00"/><path d="M29.29 24.43L25.3 20.42 13.54 32.18c.44.46 1.15.52 1.97.06l13.78-7.81" fill="#ff3a44"/><path d="M29.29 16.42L15.51 8.6c-.82-.46-1.53-.4-1.97.06L25.3 20.42l3.99-4z" fill="#01e856"/></g><g fill="#fff"><text x="50" y="14" font-family="Inter,Helvetica,Arial,sans-serif" font-size="7" font-weight="400" letter-spacing=".5">GET IT ON</text><text x="50" y="28" font-family="Inter,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">Google Play</text></g></svg>
+                </a>
+            </div>
         </div>
         <div class="hero-phone">
             <div class="phone-frame">
@@ -111,7 +119,14 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     <div class="container cta-inner">
         <h2>Stop guessing.<br>Start giving.</h2>
         <p>Join ShareWants and never give a bad gift again.</p>
-        <a href="{{ site.app_store_url }}" class="btn btn-white btn-lg">Download Free on iOS</a>
+        <div class="store-badges store-badges-center">
+            <a href="{{ site.app_store_url }}" class="store-badge" aria-label="Download on the App Store">
+                <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="40" rx="5" fill="#fff"/><g fill="#000"><path d="M24.77 20.3a4.95 4.95 0 0 1 2.36-4.15 5.07 5.07 0 0 0-3.99-2.16c-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.62-.96a5.33 5.33 0 0 0-4.49 2.73c-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.01 2.82 3.44 2.76 1.39-.06 1.91-.88 3.59-.88 1.67 0 2.14.88 3.59.85 1.49-.02 2.43-1.33 3.33-2.67a10.96 10.96 0 0 0 1.52-3.09 4.78 4.78 0 0 1-2.92-4.41zM22.04 12.21a4.87 4.87 0 0 0 1.12-3.49 4.95 4.95 0 0 0-3.21 1.66 4.64 4.64 0 0 0-1.14 3.37 4.11 4.11 0 0 0 3.23-1.54z"/><text x="42" y="15" font-family="Inter,Helvetica,Arial,sans-serif" font-size="8" font-weight="400" letter-spacing=".5">Download on the</text><text x="42" y="28" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600">App Store</text></g></svg>
+            </a>
+            <a href="{{ site.play_store_url }}" class="store-badge" aria-label="Get it on Google Play">
+                <svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg"><rect width="135" height="40" rx="5" fill="#fff"/><g fill="#000"><path d="M13.54 7.82c-.35.37-.55.91-.55 1.58v21.2c0 .67.2 1.21.55 1.58l.08.08L25.3 20.58v-.16L13.62 8.74l-.08.08z" fill="#00d1ff"/><path d="M29.2 24.48l-3.9-3.9v-.16l3.9-3.9.09.05 4.62 2.62c1.32.75 1.32 1.97 0 2.72l-4.62 2.62-.09.05z" fill="#ffbc00"/><path d="M29.29 24.43L25.3 20.42 13.54 32.18c.44.46 1.15.52 1.97.06l13.78-7.81" fill="#ff3a44"/><path d="M29.29 16.42L15.51 8.6c-.82-.46-1.53-.4-1.97.06L25.3 20.42l3.99-4z" fill="#01e856"/></g><g fill="#000"><text x="50" y="14" font-family="Inter,Helvetica,Arial,sans-serif" font-size="7" font-weight="400" letter-spacing=".5">GET IT ON</text><text x="50" y="28" font-family="Inter,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">Google Play</text></g></svg>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -205,6 +220,16 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     color: #fff;
     box-shadow: 0 4px 16px rgba(247,127,190,0.35);
 }
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--taupe);
+}
+.btn-outline:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+    box-shadow: none;
+}
 .btn-primary {
     background: linear-gradient(135deg, var(--pink), #f9a0d0);
     color: #fff;
@@ -227,6 +252,28 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     padding: 1rem 2.25rem;
     font-size: 1.1rem;
     border-radius: 14px;
+}
+
+/* --- Store Badges --- */
+.store-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.store-badges-center {
+    justify-content: center;
+}
+.store-badge {
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.store-badge:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+.store-badge svg {
+    height: 48px;
+    width: auto;
 }
 
 /* --- Phone Frame Mockup --- */
@@ -479,6 +526,9 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     }
     .hero-text {
         max-width: 100%;
+    }
+    .store-badges {
+        justify-content: center;
     }
     .hero-phone {
         order: -1;
