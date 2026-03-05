@@ -11,8 +11,14 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
             <img src="/assets/images/logo.png" alt="ShareWants" class="logo-img">
             <span>ShareWants</span>
         </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
+            <a href="#why">Why ShareWants</a>
             <a href="{{ site.web_app_url }}" class="btn btn-sm btn-outline">Log In</a>
             <a href="#download" class="btn btn-sm">Download</a>
         </div>
@@ -22,7 +28,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 <!-- Hero -->
 <section class="hero">
     <div class="container hero-inner">
-        <div class="hero-text">
+        <div class="hero-text fade-up">
             <h1>Know What Your<br>Friends <em>Actually</em> Want</h1>
             <p class="hero-sub">Social wishlists that take the guesswork out of gift-giving. Save items from any store, follow the people you love, and give gifts they'll actually use.</p>
             <div class="store-badges">
@@ -34,7 +40,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
                 </a>
             </div>
         </div>
-        <div class="hero-phone">
+        <div class="hero-phone fade-up fade-up-delay">
             <div class="phone-frame">
                 <div class="phone-notch"></div>
                 <img src="/assets/images/screenshots/feeds.png" alt="ShareWants feed showing gift ideas from friends" class="phone-screen">
@@ -86,7 +92,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 </section>
 
 <!-- Differentiators -->
-<section class="diff-section">
+<section id="why" class="diff-section">
     <div class="container">
         <h2 class="section-title">Why ShareWants?</h2>
         <div class="diffs">
@@ -133,36 +139,55 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 <!-- Footer -->
 <footer class="footer">
     <div class="container footer-inner">
-        <p>&copy; {{ 'now' | date: "%Y" }} ShareWants. All rights reserved.</p>
+        <a href="/" class="footer-brand">
+            <img src="/assets/images/logo.png" alt="ShareWants" class="footer-logo-img">
+            <span>ShareWants</span>
+        </a>
         <div class="footer-links">
             <a href="/privacy/">Privacy</a>
             <a href="/terms/">Terms</a>
             <a href="mailto:contact@sharewants.com">Contact</a>
         </div>
+        <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} ShareWants. All rights reserved.</p>
     </div>
 </footer>
 
 <style>
 /* ===== HOMEPAGE STYLES ===== */
 
+/* --- Animations --- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+    animation: fadeUp 0.7s ease-out both;
+}
+.fade-up-delay {
+    animation-delay: 0.15s;
+}
+
 /* --- Header --- */
 .header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 249, 242, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 249, 242, 0.92);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
     transition: box-shadow 0.3s;
+    border-bottom: 1px solid transparent;
 }
 .header.scrolled {
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 24px rgba(0,0,0,0.06);
+    border-bottom-color: rgba(0,0,0,0.04);
 }
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.85rem 0;
+    padding: 0.75rem 0;
+    min-height: 56px;
 }
 .logo {
     display: flex;
@@ -171,23 +196,55 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     text-decoration: none;
     color: var(--text);
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 .logo-img {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
 }
+
+/* --- Mobile Nav Toggle --- */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 4px;
+    z-index: 110;
+}
+.nav-toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Nav Links --- */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
 }
 .nav-links a {
     color: var(--taupe);
     font-weight: 500;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     transition: color 0.2s;
 }
 .nav-links a:hover {
@@ -197,24 +254,26 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 /* --- Buttons --- */
 .btn {
     display: inline-block;
-    padding: 0.85rem 1.75rem;
+    padding: 0.8rem 1.6rem;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
     cursor: pointer;
-    border: none;
+    border: 1.5px solid transparent;
+    white-space: nowrap;
 }
 .btn:hover {
     transform: translateY(-2px);
 }
 .btn-sm {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.9rem;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.85rem;
     border-radius: 10px;
     background: var(--pink);
     color: #fff;
+    border-color: var(--pink);
 }
 .btn-sm:hover {
     color: #fff;
@@ -223,12 +282,13 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 .btn-outline {
     background: transparent;
     color: var(--text);
-    border: 1.5px solid var(--taupe);
+    border-color: rgba(168,159,145,0.4);
 }
 .btn-outline:hover {
     color: var(--pink);
     border-color: var(--pink);
     box-shadow: none;
+    background: rgba(247,127,190,0.04);
 }
 .btn-primary {
     background: linear-gradient(135deg, var(--pink), #f9a0d0);
@@ -250,7 +310,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 }
 .btn-lg {
     padding: 1rem 2.25rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     border-radius: 14px;
 }
 
@@ -266,6 +326,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 .store-badge {
     display: inline-block;
     transition: transform 0.2s, opacity 0.2s;
+    line-height: 0;
 }
 .store-badge:hover {
     transform: translateY(-2px);
@@ -284,8 +345,8 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     border-radius: 36px;
     padding: 12px;
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.15),
-        0 0 0 1px rgba(255,255,255,0.1) inset;
+        0 24px 64px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.08) inset;
 }
 .phone-frame::before {
     content: '';
@@ -323,12 +384,13 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 /* --- Hero --- */
 .hero {
     background: var(--bg);
-    padding: 4rem 0 5rem;
+    padding: 5rem 0 6rem;
+    overflow: hidden;
 }
 .hero-inner {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
@@ -340,9 +402,10 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     font-family: var(--heading);
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.12;
     color: var(--text);
     margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
 }
 .hero h1 em {
     font-style: normal;
@@ -351,7 +414,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 .hero-sub {
     font-size: 1.1rem;
     color: var(--taupe);
-    line-height: 1.65;
+    line-height: 1.7;
     margin-bottom: 2rem;
 }
 .hero-phone {
@@ -361,7 +424,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 
 /* --- How It Works --- */
 .steps-section {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background: #fff;
 }
 .section-title {
@@ -369,26 +432,27 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     font-size: clamp(1.8rem, 4vw, 2.4rem);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     color: var(--text);
+    letter-spacing: -0.01em;
 }
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 960px;
     margin: 0 auto;
 }
 .step {
     text-align: center;
-    padding: 2rem 1.25rem;
-    border-radius: 20px;
+    padding: 2.25rem 1.5rem;
+    border-radius: 24px;
     background: var(--bg);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .step:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
 }
 .step-num {
     width: 44px;
@@ -411,7 +475,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 .step p {
     font-size: 0.92rem;
     color: var(--taupe);
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 1.5rem;
 }
 .step-phone {
@@ -421,26 +485,28 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 
 /* --- Differentiators --- */
 .diff-section {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background: var(--bg);
 }
 .diffs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
 }
 .diff {
     background: #fff;
-    padding: 2rem;
+    padding: 2rem 1.75rem;
     border-radius: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(0,0,0,0.04);
 }
 .diff:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.07);
+    border-color: rgba(247,127,190,0.12);
 }
 .diff-icon {
     font-size: 2rem;
@@ -455,20 +521,34 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     color: var(--text);
 }
 .diff p {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--taupe);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* --- CTA --- */
 .cta-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 100%);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    pointer-events: none;
 }
 .cta-inner {
     max-width: 560px;
     margin: 0 auto;
+    position: relative;
 }
 .cta-section h2 {
     font-family: var(--heading);
@@ -477,6 +557,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     color: #fff;
     margin-bottom: 1rem;
     line-height: 1.2;
+    letter-spacing: -0.01em;
 }
 .cta-section p {
     color: rgba(255,255,255,0.9);
@@ -486,7 +567,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
 
 /* --- Footer --- */
 .footer {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     background: #fff;
     border-top: 1px solid rgba(0,0,0,0.06);
 }
@@ -497,9 +578,23 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     flex-wrap: wrap;
     gap: 1rem;
 }
-.footer p {
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.footer-logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+}
+.footer-copy {
     color: var(--taupe);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     margin: 0;
 }
 .footer-links {
@@ -517,8 +612,67 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     color: var(--pink);
 }
 
-/* --- Mobile --- */
+/* ===== RESPONSIVE ===== */
+
+/* --- Tablet (769px - 1024px) --- */
+@media (max-width: 1024px) {
+    .hero-inner {
+        gap: 2.5rem;
+    }
+    .phone-frame {
+        width: 220px;
+    }
+    .steps {
+        gap: 1.5rem;
+    }
+    .step {
+        padding: 1.75rem 1.25rem;
+    }
+}
+
+/* --- Small Tablet / Large Mobile (481px - 768px) --- */
 @media (max-width: 768px) {
+    /* Nav */
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        max-width: 80vw;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(255, 249, 242, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 5rem 1.75rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -8px 0 32px rgba(0,0,0,0.08);
+        z-index: 105;
+    }
+    .nav-links.open {
+        transform: translateX(0);
+    }
+    .nav-links a {
+        font-size: 1.05rem;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-links .btn {
+        text-align: center;
+        margin-top: 0.5rem;
+        border-bottom: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 3rem 0 3.5rem;
+    }
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -527,33 +681,172 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     .hero-text {
         max-width: 100%;
     }
-    .store-badges {
-        justify-content: center;
-    }
     .hero-phone {
         order: -1;
     }
     .phone-frame {
         width: 200px;
     }
+    .store-badges {
+        justify-content: center;
+    }
+
+    /* Steps */
+    .steps-section {
+        padding: 4rem 0;
+    }
     .steps {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        max-width: 400px;
+        max-width: 420px;
     }
-    .phone-frame-sm {
-        width: 160px;
+    .step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 1.25rem;
+        text-align: left;
+        padding: 1.75rem;
+    }
+    .step-num {
+        grid-row: 1 / 3;
+        align-self: start;
+        margin: 0;
+    }
+    .step h3 {
+        margin-bottom: 0.25rem;
+    }
+    .step p {
+        margin-bottom: 0;
+    }
+    .step-phone {
+        grid-column: 1 / -1;
+        margin-top: 1.25rem;
+    }
+
+    /* Diffs */
+    .diff-section {
+        padding: 4rem 0;
     }
     .diffs {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 420px;
     }
-    .hero {
-        padding: 3rem 0 3.5rem;
+
+    /* CTA */
+    .cta-section {
+        padding: 4rem 0;
     }
+
+    /* Footer */
     .footer-inner {
         flex-direction: column;
         text-align: center;
     }
 }
+
+/* --- Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    .hero {
+        padding: 2rem 0 2.5rem;
+    }
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+    .hero-sub {
+        font-size: 1rem;
+    }
+    .phone-frame {
+        width: 180px;
+        border-radius: 28px;
+        padding: 10px;
+    }
+    .phone-frame::before {
+        width: 80px;
+        height: 20px;
+    }
+    .phone-notch {
+        width: 64px;
+        height: 16px;
+    }
+    .phone-screen {
+        border-radius: 18px;
+    }
+    .phone-frame-sm {
+        width: 140px;
+    }
+    .store-badge svg {
+        height: 42px;
+    }
+    .section-title {
+        margin-bottom: 2.5rem;
+    }
+    .steps-section {
+        padding: 3rem 0;
+    }
+    .diff-section {
+        padding: 3rem 0;
+    }
+    .cta-section {
+        padding: 3rem 0;
+    }
+    .cta-section h2 {
+        font-size: 1.7rem;
+    }
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+    .nav-links {
+        width: 100%;
+        max-width: 100%;
+    }
+    .logo span {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up {
+        animation: none;
+        opacity: 1;
+    }
+    .step, .diff, .btn, .store-badge {
+        transition: none;
+    }
+}
 </style>
+
+<script>
+// Mobile nav toggle
+(function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav-links');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('open');
+    });
+
+    // Close nav when a link is clicked
+    nav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('open');
+        });
+    });
+
+    // Close nav on outside click
+    document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('open');
+        }
+    });
+})();
+</script>
