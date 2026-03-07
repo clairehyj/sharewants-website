@@ -1,7 +1,20 @@
 ---
 layout: default
-title: "Know What Your Friends Want"
-description: "Social wishlists that make gift-giving effortless. Add items from any store, follow friends, and give gifts they actually love."
+title: "ShareWants — Free Wishlist App to Create & Share Wishlists"
+description: "Create and share wishlists from any store. The free wishlist app for birthdays, Christmas, weddings, and every occasion. Follow friends and family to see what they actually want."
+schema_faq:
+  - question: "What is ShareWants?"
+    answer: "ShareWants is a free wishlist app that lets you create and share wishlists from any store. Save items from 24+ retailers including Amazon, Target, Sephora, and Nike, then share your list with friends and family so they know exactly what you want."
+  - question: "Is ShareWants free?"
+    answer: "Yes, ShareWants is completely free with no subscriptions, premium tiers, or hidden costs. All features are available to every user at no charge."
+  - question: "How do I add items to my wishlist?"
+    answer: "You can add items three ways: use the share extension while browsing any store in your phone's browser, use the AI product scanner to snap a photo of any item, or paste a product URL directly into the app."
+  - question: "What stores does ShareWants work with?"
+    answer: "ShareWants works with 24+ major retailers including Amazon, Target, Walmart, Sephora, Nike, Nordstrom, Best Buy, Apple, Etsy, and many more. You can add items from virtually any online store."
+  - question: "Can I share my wishlist with friends and family?"
+    answer: "Absolutely! ShareWants is built for sharing. You can follow friends and family to see their wishlists in your feed, and they can follow you back. Share your profile link or QR code so anyone can see what you want."
+  - question: "Is ShareWants available on iPhone and Android?"
+    answer: "Yes, ShareWants is available as a free download on both the App Store for iPhone and Google Play for Android devices."
 ---
 
 <!-- Header -->
@@ -19,6 +32,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
             <a href="#why">Why ShareWants</a>
+            <a href="/blog/">Gift Guides</a>
             <a href="{{ site.web_app_url }}" class="btn btn-sm btn-outline">Log In</a>
             <a href="#download" class="btn btn-sm">Download</a>
         </div>
@@ -120,6 +134,90 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     </div>
 </section>
 
+<!-- Use Cases -->
+<section class="use-cases-section">
+    <div class="container">
+        <h2 class="section-title">Wishlists for Every Occasion</h2>
+        <div class="use-cases">
+            <a href="/birthday-wishlist/" class="use-case">
+                <span class="use-case-icon">&#x1f382;</span>
+                <h3>Birthday Wishlists</h3>
+                <p>Create the perfect birthday wishlist and share it with friends and family.</p>
+            </a>
+            <a href="/christmas-wishlist/" class="use-case">
+                <span class="use-case-icon">&#x1f384;</span>
+                <h3>Christmas Wishlists</h3>
+                <p>Make holiday gift-giving easy with shareable Christmas wish lists.</p>
+            </a>
+            <a href="/wedding-registry/" class="use-case">
+                <span class="use-case-icon">&#x1f492;</span>
+                <h3>Wedding Registries</h3>
+                <p>Build a universal wedding registry from any store, all in one place.</p>
+            </a>
+            <a href="/baby-shower-registry/" class="use-case">
+                <span class="use-case-icon">&#x1f476;</span>
+                <h3>Baby Shower Registries</h3>
+                <p>Create a baby registry with items from every store you love.</p>
+            </a>
+            <a href="/family-wishlist/" class="use-case">
+                <span class="use-case-icon">&#x1f46a;</span>
+                <h3>Family Wishlists</h3>
+                <p>Keep the whole family connected with shared wish lists year-round.</p>
+            </a>
+            <a href="/group-wishlist/" class="use-case">
+                <span class="use-case-icon">&#x1f91d;</span>
+                <h3>Group Wishlists</h3>
+                <p>Coordinate gifts for group events, Secret Santa, and more.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-question">What is ShareWants?</summary>
+                <div class="faq-answer">
+                    <p>ShareWants is a free wishlist app that lets you create and share wishlists from any store. Save items from 24+ retailers including Amazon, Target, Sephora, and Nike, then share your list with friends and family so they know exactly what you want.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Is ShareWants free?</summary>
+                <div class="faq-answer">
+                    <p>Yes, ShareWants is completely free with no subscriptions, premium tiers, or hidden costs. All features are available to every user at no charge.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">How do I add items to my wishlist?</summary>
+                <div class="faq-answer">
+                    <p>You can add items three ways: use the share extension while browsing any store in your phone's browser, use the AI product scanner to snap a photo of any item, or paste a product URL directly into the app.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What stores does ShareWants work with?</summary>
+                <div class="faq-answer">
+                    <p>ShareWants works with 24+ major retailers including Amazon, Target, Walmart, Sephora, Nike, Nordstrom, Best Buy, Apple, Etsy, and many more. You can add items from virtually any online store.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Can I share my wishlist with friends and family?</summary>
+                <div class="faq-answer">
+                    <p>Absolutely! ShareWants is built for sharing. You can follow friends and family to see their wishlists in your feed, and they can follow you back. Share your profile link or QR code so anyone can see what you want.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Is ShareWants available on iPhone and Android?</summary>
+                <div class="faq-answer">
+                    <p>Yes, ShareWants is available as a free download on both the App Store for iPhone and Google Play for Android devices.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- Download CTA -->
 <section id="download" class="cta-section">
     <div class="container cta-inner">
@@ -144,6 +242,7 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
             <span>ShareWants</span>
         </a>
         <div class="footer-links">
+            <a href="/blog/">Gift Guides</a>
             <a href="/privacy/">Privacy</a>
             <a href="/terms/">Terms</a>
             <a href="/disclosure/">Disclosure</a>
@@ -527,6 +626,102 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     line-height: 1.65;
 }
 
+/* --- Use Cases --- */
+.use-cases-section {
+    padding: 6rem 0;
+    background: #fff;
+}
+.use-cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.use-case {
+    background: var(--bg);
+    padding: 2rem 1.75rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid transparent;
+}
+.use-case:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.07);
+    border-color: rgba(247,127,190,0.12);
+    color: var(--text);
+}
+.use-case-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.use-case h3 {
+    font-family: var(--heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.use-case p {
+    font-size: 0.9rem;
+    color: var(--taupe);
+    line-height: 1.6;
+}
+
+/* --- FAQ --- */
+.faq-section {
+    padding: 6rem 0;
+    background: var(--bg);
+}
+.faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+.faq-question {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+}
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+.faq-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--pink);
+    flex-shrink: 0;
+    margin-left: 1rem;
+    transition: transform 0.2s;
+}
+.faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    padding: 0 1.5rem 1.25rem;
+}
+.faq-answer p {
+    font-size: 0.92rem;
+    color: var(--taupe);
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* --- CTA --- */
 .cta-section {
     padding: 6rem 0;
@@ -734,6 +929,20 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
         max-width: 420px;
     }
 
+    /* Use Cases */
+    .use-cases-section {
+        padding: 4rem 0;
+    }
+    .use-cases {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+        padding: 4rem 0;
+    }
+
     /* CTA */
     .cta-section {
         padding: 4rem 0;
@@ -799,6 +1008,16 @@ description: "Social wishlists that make gift-giving effortless. Add items from 
     }
     .cta-section p {
         font-size: 0.95rem;
+    }
+    .use-cases-section {
+        padding: 3rem 0;
+    }
+    .use-cases {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+    .faq-section {
+        padding: 3rem 0;
     }
     .nav-links {
         width: 100%;

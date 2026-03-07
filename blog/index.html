@@ -1,0 +1,57 @@
+---
+layout: default
+title: "Gift Guides & Ideas"
+description: "Discover the best gift ideas for every occasion. Expert-curated gift guides to help you find the perfect present."
+---
+
+<div class="blog-hero">
+    <div class="container">
+        <h1>Gift Guides & Ideas</h1>
+        <p>Expert-curated gift recommendations for every person and occasion.</p>
+    </div>
+</div>
+
+<div class="container blog-listing">
+    {% if paginator.posts.size > 0 %}
+    <div class="blog-grid">
+        {% for post in paginator.posts %}
+        <a href="{{ post.url | relative_url }}" class="blog-card">
+            {% if post.image %}
+            <div class="blog-card-img" style="background-image: url('{{ post.image }}')"></div>
+            {% else %}
+            <div class="blog-card-img blog-card-img-placeholder"></div>
+            {% endif %}
+            <div class="blog-card-body">
+                <div class="blog-card-meta">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                    {% if post.categories.size > 0 %}
+                    <span class="blog-card-category">{{ post.categories | first }}</span>
+                    {% endif %}
+                </div>
+                <h2>{{ post.title | escape }}</h2>
+                <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="blog-pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-outline btn-sm">&larr; Newer</a>
+        {% endif %}
+        <span class="blog-pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="btn btn-outline btn-sm">Older &rarr;</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+
+    {% else %}
+    <div class="blog-empty">
+        <h2>Coming Soon</h2>
+        <p>Gift guides are on the way. Check back soon for curated gift recommendations!</p>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+    {% endif %}
+</div>

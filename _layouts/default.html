@@ -11,6 +11,14 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/logo.png' | absolute_url }}">
+    <meta property="og:site_name" content="ShareWants">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ '/assets/images/logo.png' | absolute_url }}">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/icons/favicon-32x32.png' | relative_url }}">
@@ -26,6 +34,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ShareWants",
+      "url": "https://sharewants.com",
+      "logo": "{{ '/assets/images/logo.png' | absolute_url }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@sharewants.com",
+        "contactType": "customer support"
+      },
+      "sameAs": [
+        "{{ site.app_store_url }}",
+        "{{ site.play_store_url }}"
+      ]
+    }
+    </script>
+
+    {% if page.url == "/" %}
+    <!-- Structured Data: WebApplication (homepage only) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ShareWants",
+      "url": "https://sharewants.com",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Create and share wishlists from any store. The free wishlist app for birthdays, Christmas, weddings, and every occasion.",
+      "featureList": "Universal wishlists, Social sharing, AI product scanning, 24+ retailer support, Share extension, Follow friends and family",
+      "screenshot": "{{ '/assets/images/screenshots/feeds.png' | absolute_url }}"
+    }
+    </script>
+    {% endif %}
+
+    {% if page.schema_faq %}
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in page.schema_faq %}
+        {
+          "@type": "Question",
+          "name": {{ faq.question | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ faq.answer | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+    {% endif %}
+
+    {% if page.breadcrumbs %}
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sharewants.com/"
+        }{% for crumb in page.breadcrumbs %},
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index | plus: 1 }},
+          "name": {{ crumb.name | jsonify }},
+          "item": "https://sharewants.com{{ crumb.url }}"
+        }{% endfor %}
+      ]
+    }
+    </script>
+    {% endif %}
 </head>
 <body>
     {% if page.url == "/" %}
@@ -39,6 +135,9 @@
                 <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ShareWants" class="logo-img">
                 <span>{{ site.title }}</span>
             </a>
+            <div class="blog-nav-links">
+                <a href="{{ '/blog/' | relative_url }}">Gift Guides</a>
+            </div>
         </nav>
     </header>
 
@@ -50,6 +149,7 @@
         <div class="container footer-inner">
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
             <div class="footer-links">
+                <a href="{{ '/blog/' | relative_url }}">Gift Guides</a>
                 <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
                 <a href="{{ '/terms/' | relative_url }}">Terms</a>
                 <a href="mailto:{{ site.email }}">Contact</a>

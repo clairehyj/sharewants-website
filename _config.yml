@@ -1,11 +1,24 @@
 # Site settings
 title: ShareWants
+tagline: "Create & Share Wishlists for Any Occasion"
 email: contact@sharewants.com
 description: >-
-  Know what your friends and family actually want. Social wishlists that make
-  gift-giving effortless.
+  Create and share wishlists from any store. The free wishlist app for birthdays,
+  Christmas, weddings, and every occasion. Follow friends and family to see what
+  they actually want. Available on iOS and Android.
 baseurl: ""
 url: "https://sharewants.com"
+
+# Social / SEO
+twitter:
+  username: sharewants
+  card: summary_large_image
+social:
+  name: ShareWants
+  links:
+    - https://apps.apple.com/app/sharewants/id6744228534
+    - https://play.google.com/store/apps/details?id=com.sharewants.ShareWants
+locale: en_US
 
 # App store links
 app_store_url: "https://apps.apple.com/app/sharewants/id6744228534"
@@ -23,6 +36,14 @@ theme: null
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Blog / Pagination
+paginate: 12
+paginate_path: "/blog/page:num"
+permalink: /blog/:year/:month/:title/
 
 # Exclude from processing
 exclude:
@@ -45,3 +66,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "ShareWants"
