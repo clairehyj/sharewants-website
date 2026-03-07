@@ -31,7 +31,7 @@ schema_faq:
         </button>
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
-            <a href="#why">Why ShareWants</a>
+            <a href="/features/">Features</a>
             <a href="/blog/">Gift Guides</a>
             <a href="{{ site.web_app_url }}" class="btn btn-sm btn-outline">Log In</a>
             <a href="#download" class="btn btn-sm">Download</a>
@@ -242,7 +242,11 @@ schema_faq:
             <span>ShareWants</span>
         </a>
         <div class="footer-links">
+            <a href="/features/">Features</a>
             <a href="/blog/">Gift Guides</a>
+            <a href="/birthday-wishlist/">Birthday</a>
+            <a href="/christmas-wishlist/">Christmas</a>
+            <a href="/wedding-registry/">Wedding</a>
             <a href="/privacy/">Privacy</a>
             <a href="/terms/">Terms</a>
             <a href="/disclosure/">Disclosure</a>
